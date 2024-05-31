@@ -35,12 +35,12 @@ svg text {
 .turma,
 .alunos {
     text-align: center;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 700;
 }
 
-.turma{
-    margin-top: 85px;
+.turma {
+    margin-top: 45px;
     z-index: 9990;
 }
 

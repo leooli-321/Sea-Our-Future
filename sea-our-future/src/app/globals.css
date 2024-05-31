@@ -1,9 +1,15 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 :root {
   --cor-azul-marinho: #0892a5;
   --cor-turquesa: #00fddc;
   --cor-preto: #0e0f19;
   --cor-fundo: #ffffff;
   --cor-vermelho: #990d35;
+  --border-px: 200px;
+  --fonte-titulo: "Lato", sans-serif;
+  --fonte-texto: "Space Mono", monospace;
 }
 
 ::-webkit-scrollbar {

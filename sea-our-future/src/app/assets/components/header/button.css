@@ -1,0 +1,46 @@
+.btn {
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 200px;
+    background-color: #ffffff !important;
+    color: #ffffff;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    font-family: "Lato", sans-serif;
+
+    border-radius: var(--border-px) !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+button:hover {
+    background-color: #6fc5ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
