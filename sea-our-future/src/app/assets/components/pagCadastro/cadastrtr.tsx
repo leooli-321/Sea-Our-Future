@@ -53,7 +53,7 @@ const Cadastro: React.FC = () => {
         {currentPage === 2 && (
           <form action="index.html" method="post">
             {/* Page 2 content */}
-
+            
             <fieldset>
               <legend>
                 <span className="number">2</span> Endereço
