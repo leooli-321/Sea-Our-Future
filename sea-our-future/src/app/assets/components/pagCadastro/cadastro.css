@@ -1,9 +1,18 @@
 .cadastroEmpresa {
-    max-width: 300px;
-    margin: 10px auto;
-    padding: 10px 20px;
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 1px 20px;
     background: var(--cor-fundo);
     border-radius: var(--border-px);
+    display: block;
+}
+
+label {
+    white-space: nowrap;
+}
+
+fieldset {
+    display: inline-block;
 }
 
 .tituloCadastro {
@@ -12,7 +21,7 @@
     font-family: var(--fonte-titulo);
 }
 
-input,
+.cadastroInput,
 textarea,
 select {
     background: rgba(255, 255, 255, 0.1);
@@ -21,18 +30,13 @@ select {
     height: auto;
     margin: 0;
     outline: 0;
-    padding: 15px;
+    padding: 13px;
     width: 100%;
     background-color: #e8eeef;
     color: #8a97a0;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-family: var(--fonte-texto);
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    margin: 0 4px 8px 0;
 }
 
 select {
@@ -42,41 +46,25 @@ select {
     font-family: var(--fonte-texto);
 }
 
-button {
-    padding: 19px 39px 18px 39px;
+.btnCadastro {
+    padding: 5px 30px 5px 30px;
     color: #fff;
     background-color: var(--cor-azul-marinho);
-    font-size: 18px;
+    font-size: 17px;
     text-align: center;
     font-style: normal;
+    font-weight: 800;
     border-radius: 5px;
-    width: 100%;
+    align-items: center;
+    width: 30%;
     border: 1px solid var(--cor-turquesa);
     border-width: 1px 1px 3px;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
     margin-bottom: 10px;
     font-family: var(--fonte-titulo);
-}
-
-fieldset {
-    margin-bottom: 30px;
-    border: none;
-}
-
-legend {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-    font-family: var(--fonte-titulo);
-}
-
-label {
     display: block;
-    margin-bottom: 8px;
-}
-
-label.light {
-    font-weight: 300;
-    display: inline;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 .number {
@@ -94,7 +82,32 @@ label.light {
 }
 
 @media screen and (min-width: 480px) {
-    form {
+    .formCadastro {
         max-width: 480px;
     }
+}
+
+/* cadastro.css */
+.formCadastro {
+    margin-top: 110px;
+}
+
+/* Estilo para os rótulos (labels) */
+.formCadastro label {
+    width: 100px; /* Largura fixa para os rótulos */
+    font-weight: bold;
+}
+
+/* Estilo para os campos de entrada (inputs) */
+.formCadastro input {
+    flex: 1; /* Ocupa o espaço restante na linha */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo para a legenda (legend) */
+.formCadastro legend {
+    font-weight: bold;
+    margin-bottom: 10px;
 }

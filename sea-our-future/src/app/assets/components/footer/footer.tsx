@@ -1,7 +1,7 @@
 // footer.tsx
 
 import React from "react";
-import "./style.css"; // Importando os estilos CSS
+import "./footer.css"; // Importando os estilos CSS
 
 const Footer: React.FC = () => {
   return (
@@ -31,14 +31,6 @@ const Footer: React.FC = () => {
           <use xlinkHref="#gentle-wave" x="48" y="5" fill="#055761" />
         </g>
       </svg>
-
-      {/* 
-      <div className="content">
-  <h3>1TDSPS</h3>
-  <h4>Felipe Amador Matos - RM553528</h4>
-  <h4>Leonardo de Oliveira - RM554024</h4>
-  <h4>Sara Sousa - RM552656</h4>
-</div> */}
     </div>
   );
 };

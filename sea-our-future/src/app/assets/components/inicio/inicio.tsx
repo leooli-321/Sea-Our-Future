@@ -1,7 +1,7 @@
 // inicio.tsx
 
 import React from "react";
-import "./style.css"; // Importando o arquivo style.css
+import "./inicio.css"; // Importando o arquivo style.css
 
 const Inicio: React.FC = () => {
   return (

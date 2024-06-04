@@ -1,5 +1,3 @@
-
-
 .tituloLogin {
 	font-weight: bold;
 	margin: 0;
@@ -9,15 +7,11 @@
 	margin-bottom: 25px;
 }
 
-h2 {
-	text-align: center;
-}
-
 span {
 	font-size: 12px;
 }
 
-form {
+.formLogin {
 	background-color: #ffffff;
 	display: flex;
 	align-items: center;
@@ -28,14 +22,15 @@ form {
 	text-align: center;
 }
 
-input {
+.inputLogin {
 	background-color: #eee;
-	border: none;
+	border: 1px solid black;
 	border-radius: var(--border-px);
 	padding: 12px 15px;
 	width: 60%;
 	margin-bottom: 15px !important;
 	margin-top: 10px !important;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #singIn,
@@ -138,4 +133,29 @@ input {
 .overlay-right {
 	right: 0;
 	transform: translateX(0);
+}
+
+@media only screen and (max-width: 959px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	.form-container,
+	.overlay-container {
+		width: 100%; /* Defina a largura para 100% para que os elementos ocupem toda a largura da tela */
+	}
+
+	.overlay {
+		width: 0%; /* Defina a largura para 100% para que o painel de sobreposição ocupe toda a largura da tela */
+	}
+
+	.overlay-panel {
+		width: 0%; /* Defina a largura para 100% para que o painel de sobreposição ocupe toda a largura da tela */
+	}
+
+	.inputLogin{
+		padding: 12px 30px;
+		width: 100%;
+		margin-top: 10px;
+	}
 }

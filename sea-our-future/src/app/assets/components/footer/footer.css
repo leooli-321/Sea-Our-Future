@@ -21,7 +21,7 @@ footer {
 
 .content {
   position: relative;
-  font-size: 1rem;
+  font-size: rem;
   text-align: center;
   background-color: #055761;
 }
@@ -55,9 +55,9 @@ footer {
 }
 
 /*Shrinking for mobile*/
-@media (max-width: 768px) {
+@media (max-width: 959px) {
   .waves {
-    height: 40px;
+    height: 400px;
     min-height: 40px;
   }
   .content {
@@ -67,3 +67,4 @@ footer {
     font-size: 24px;
   }
 }
+

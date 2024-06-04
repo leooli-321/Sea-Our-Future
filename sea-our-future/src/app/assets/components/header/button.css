@@ -33,7 +33,6 @@ button:hover {
         transform: scale(1);
     }
 }
-
 @keyframes scale-up-center {
     0% {
         -webkit-transform: scale(1);
@@ -42,5 +41,35 @@ button:hover {
     100% {
         -webkit-transform: scale(1.2);
         transform: scale(1.2);
+    }
+}
+
+@media only screen and (max-width: 959px) {
+    .btn {
+        padding: 2px 3px !important;
+        border: 0;
+        border-radius: 200px;
+        background-color: #ffffff !important;
+        color: #ffffff;
+        font-size: 15px !important;
+        font-weight: 800 !important;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        font-family: "Lato", sans-serif;
+        vertical-align: middle;
+        border-radius: var(--border-px) !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    @keyframes scale-up-center {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
     }
 }

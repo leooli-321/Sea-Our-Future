@@ -3,6 +3,7 @@
 import React from "react";
 import "./button.css";
 import "./style.css";
+import "./hamburguer.css";
 import Link from "next/link";
 
 const Header: React.FC = () => {
@@ -13,17 +14,15 @@ const Header: React.FC = () => {
       </Link>
       <ul className="navLinks">
         <li>Dashboard</li>
-        <li>Profile</li>
-
-        <Link href="./Cadastro">
-          <li>Cadastre sua Empresa</li>
-        </Link>
-
+        <li>
+          <Link href="./Cadastro">Cadastre sua Empresa</Link>
+        </li>
         <li>Sobre Nós</li>
-
-        <Link href="./Login">
-          <button className="btn">Login</button>
-        </Link>
+        <li>
+          <Link href="./Login">
+            <button className="btn">Login</button>
+          </Link>
+        </li>
       </ul>
     </header>
   );
