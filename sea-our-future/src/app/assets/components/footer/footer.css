@@ -19,13 +19,6 @@ footer {
   max-height: 100px;
 }
 
-.content {
-  position: relative;
-  font-size: rem;
-  text-align: center;
-  background-color: #055761;
-}
-
 .parallax > use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
@@ -54,17 +47,9 @@ footer {
   }
 }
 
-/*Shrinking for mobile*/
 @media (max-width: 959px) {
   .waves {
     height: 400px;
     min-height: 40px;
   }
-  .content {
-    height: 30vh;
-  }
-  h1 {
-    font-size: 24px;
-  }
 }
-

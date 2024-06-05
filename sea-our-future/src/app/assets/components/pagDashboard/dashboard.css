@@ -1,99 +1,32 @@
-/* dashboard.css */
-
-/* Estilize o contêiner do gráfico */
-.dashboard-container {
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    margin-top: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: auto;
-}
-
-.navLinks {
-    -webkit-animation: slide-in-blurred-right 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
-    animation: slide-in-blurred-right 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-@-webkit-keyframes slide-in-blurred-right {
-    0% {
-        -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-        transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-        -webkit-transform-origin: 0% 50%;
-        transform-origin: 0% 50%;
-        -webkit-filter: blur(40px);
-        filter: blur(40px);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-        transform: translateX(0) scaleY(1) scaleX(1);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-        -webkit-filter: blur(0);
-        filter: blur(0);
-        opacity: 1;
-    }
-}
-@keyframes slide-in-blurred-right {
-    0% {
-        -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-        transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-        -webkit-transform-origin: 0% 50%;
-        transform-origin: 0% 50%;
-        -webkit-filter: blur(40px);
-        filter: blur(40px);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-        transform: translateX(0) scaleY(1) scaleX(1);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-        -webkit-filter: blur(0);
-        filter: blur(0);
-        opacity: 1;
-    }
-}
-
-/* Estilize o contêiner do gráfico */
-.chart-container {
-    width: 50%;
-    height: 400px; /* Ajuste conforme necessário */
-    margin-right: 10px;
-}
-
-/* Estilize a legenda manual */
-.manual-legend,
-.percentage-overlay {
-    width: 25%;
-    margin: 9px;
-    padding-left: 1px;
-    font-size: 26px;
-    display: flex;
-    flex-direction: column;
-    white-space: nowrap;
-}
-
-/* Estilize cada rótulo da legenda */
-.manual-legend span {
-    margin-right: 1px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 3px;
-    padding: 5px 24px;
-    font-size: 16px;
-    font-weight: 700;
+.tituloDash {
     font-family: var(--fonte-titulo);
-    color: #000000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s; /* Adicione uma transição suave */
+    font-weight: 900;
+    font-size: 40px;
+    margin: 0 auto;
+    margin-top: 150px !important;
+    text-align: center;
+}
+.subtituloDash {
+    font-family: var(--fonte-titulo);
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-/* Quando o mouse estiver sobre o rótulo, altere a cor de fundo */
-.manual-legend span:hover {
-    background-color: #000000; /* Cor preta para destaque */
-    color: #000000; /* Texto em branco para melhor contraste */
+@media only screen and (max-width: 959px) {
+    .tituloDash {
+        font-family: var(--fonte-titulo);
+        font-weight: 900;
+        font-size: 20px;
+        margin: 5px auto;
+        margin-top: 150px !important;
+        text-align: center;
+    }
+    .subtituloDash {
+        font-family: var(--fonte-titulo);
+        margin: 10px;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
