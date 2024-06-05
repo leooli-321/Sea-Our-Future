@@ -10,7 +10,7 @@
     position: relative;
 }
 
-svg {
+.animacao {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -48,7 +48,7 @@ svg text {
 }
 
 /* Retângulo no SVG */
-svg rect {
+.animacao rect {
     fill: white;
 }
 
@@ -57,7 +57,7 @@ svg rect {
         margin-top: 150px;
         width: 100%;
     }
-    svg {
+    .animacao {
         width: 100%;
     }
 

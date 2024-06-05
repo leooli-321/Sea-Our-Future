@@ -1,0 +1,59 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card1 {
+  width: 30em;
+  height: 22.5em;
+  background: #171717;
+  transition: 1s ease-in-out;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.perfil {
+  font-family: var(--fonte-titulo);
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+
+.card1 .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: justify;
+  font-size: 0.8em;
+  margin: 1.5em;
+}
+
+.card1 .imgPerfil {
+  width: 6em;
+  height: 6em;
+  background: white;
+  border-radius: 50px;
+  margin: auto;
+}
+
+.card1 .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.card1 .linkedIn {
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+
+.card1 .linkedIn:hover {
+  color: red;
+}

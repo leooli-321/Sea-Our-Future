@@ -19,6 +19,7 @@ const Inicio: React.FC = () => {
         </video>
 
         <svg
+          className="animacao"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 285 80"
           preserveAspectRatio="xMidYMid slice"

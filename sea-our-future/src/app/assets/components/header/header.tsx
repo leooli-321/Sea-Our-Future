@@ -17,7 +17,9 @@ const Header: React.FC = () => {
         <li>
           <Link href="./Cadastro">Cadastre sua Empresa</Link>
         </li>
-        <li>Sobre Nós</li>
+        <Link href="./SobreNos">
+          <li>Sobre Nós</li>
+        </Link>
         <li>
           <Link href="./Login">
             <button className="btn">Login</button>
