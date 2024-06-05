@@ -13,13 +13,15 @@ const Header: React.FC = () => {
         <div className="brand">Sea Our Future</div>
       </Link>
       <ul className="navLinks">
-        <li>Dashboard</li>
+        <li>
+          <Link href="./Dashboard">Dashboard</Link>
+        </li>
         <li>
           <Link href="./Cadastro">Cadastre sua Empresa</Link>
         </li>
-        <Link href="./SobreNos">
-          <li>Sobre Nós</li>
-        </Link>
+        <li>
+          <Link href="./SobreNos">Sobre Nós</Link>
+        </li>
         <li>
           <Link href="./Login">
             <button className="btn">Login</button>
