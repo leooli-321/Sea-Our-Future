@@ -14,6 +14,9 @@ const Header: React.FC = () => {
       </Link>
       <ul className="navLinks">
         <li>
+          <Link href="./Perfil">Perfil</Link>
+        </li>
+        <li>
           <Link href="./Dashboard">Dashboard</Link>
         </li>
         <li>
