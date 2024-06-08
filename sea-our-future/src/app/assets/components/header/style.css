@@ -162,3 +162,18 @@
 		vertical-align: middle;
 	}
 }
+
+
+/* Estilos para os links */
+.link {
+	text-decoration: none !important;
+	color: #333; /* Cor padrão do texto */
+	transition: color 0.3s ease; /* Transição suave para a cor do texto */
+  }
+  
+  /* Estilo para o hover */
+  .link:hover {
+	color: #000000; /* Cor do texto ao passar o mouse */
+	font-weight: bold; /* Texto em negrito ao passar o mouse */
+  }
+  

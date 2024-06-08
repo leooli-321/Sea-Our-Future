@@ -14,16 +14,16 @@ const Header: React.FC = () => {
       </Link>
       <ul className="navLinks">
         <li>
-          <Link href="./Perfil">Perfil</Link>
+          <Link href="./Perfil" className="link">Perfil</Link>
         </li>
         <li>
-          <Link href="./Dashboard">Dashboard</Link>
+          <Link href="./Dashboard" className="link">Dashboard</Link>
         </li>
         <li>
-          <Link href="./Cadastro">Cadastre sua Empresa</Link>
+          <Link href="./Cadastro" className="link">Cadastre sua Empresa</Link>
         </li>
         <li>
-          <Link href="./SobreNos">Sobre Nós</Link>
+          <Link href="./SobreNos" className="link">Sobre Nós</Link>
         </li>
         <li>
           <Link href="./Login">
