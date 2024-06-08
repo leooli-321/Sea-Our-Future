@@ -31,7 +31,6 @@ const Perfil: React.FC = () => {
               <span className="sales">Última conexão: há 19 dias 🟢</span>
             </div>
           </div>
-
         </div>
       </div>
 
