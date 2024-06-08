@@ -15,5 +15,3 @@ A aplicação **Sea Our Future** tem como objetivo conectar empresas de transfor
 ## Dashboard:
 
 A dashboard exibe dados sobre os locais mais afetados pelo plástico, focando exclusivamente nos estados brasileiros.
-
-Espero que isso atenda às suas necessidades! Se precisar de mais alguma ajuda, estou à disposição. 😊
