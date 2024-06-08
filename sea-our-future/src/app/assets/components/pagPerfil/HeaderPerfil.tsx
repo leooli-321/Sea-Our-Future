@@ -2,16 +2,17 @@
 import React from "react";
 import "./headerPerfil.css";
 
-const HeaderPerfil: React.FC = () => {
+const HeaderPerfil: React.FC<{logoPerfil: string | undefined, razaoSocialPerfilEmpresa: string | undefined}> = ({logoPerfil, razaoSocialPerfilEmpresa}) => {
   return (
     <div className="profile">
       <div className="profile-avatar">
+        
         <img
-          src="https://i.ibb.co/z4MC8t6/Ag-ncia-de-emprego-logo-1.png"
+          src={logoPerfil ? logoPerfil : 'https://cdn-icons-png.flaticon.com/512/6789/6789241.png'}
           alt="Profile Avatar"
           className="profile-img"
         />
-        <div className="profile-name">MarineTech</div>
+        <div className="profile-name">{razaoSocialPerfilEmpresa}</div>
       </div>
       <img
         src="https://images.unsplash.com/photo-1439405326854-014607f694d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

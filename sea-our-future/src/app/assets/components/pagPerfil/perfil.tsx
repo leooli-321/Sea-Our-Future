@@ -1,9 +1,59 @@
 // Perfil.tsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./perfil.css";
+import { empresa } from "@/types/empresa";
+import axios, { AxiosRequestConfig } from "axios";
+import { BASE_URL } from "@/utils/requests";
+import HeaderPerfil from "./HeaderPerfil";
+import { perfil } from "@/types/perfil";
 
-const Perfil: React.FC = () => {
-  return (
+
+const Perfil: React.FC<{ idEmpresa: string }> = ({ idEmpresa }) => {
+  const [objEmpresa, setObjEmpresa] = useState<empresa>();
+  const [objPerfil, setObjPerfil] = useState<perfil>();
+
+  useEffect(() => {
+    getEmpresas();
+  }, []);
+  
+
+  const getEmpresas = async () => {
+    try {
+      // ----> BUSCA EMPRESA
+      const selectEmpresas: AxiosRequestConfig = {
+        baseURL: BASE_URL,
+        method: "GET",
+        url: "/empresa",
+      };
+      const empresasResponse = await axios(selectEmpresas);
+      const empresa = empresasResponse.data.find((item: any) => item.id === parseInt(idEmpresa));
+      if (empresa) {
+        setObjEmpresa(empresa);
+      } else {
+        console.log("Empresa não encontrada");
+      }
+      // ----> BUSCA PERFIL DA EMPRESA
+      const selectPerfil: AxiosRequestConfig = {
+        baseURL: BASE_URL,
+        method: "GET",
+        url: "/perfil",
+      };
+      const perfilResponse = await axios(selectPerfil);
+      const perfil = perfilResponse.data.find((item: any) => item.idEmpresa === parseInt(idEmpresa));
+      if (perfil) {
+        setObjPerfil(perfil);
+      } else {
+        console.log("Perfil não encontrado");
+      }
+      
+    } catch (error) {
+      console.error("Ocorreu um erro ao obter a empresa:", error);
+    }
+  };
+
+
+  return <>
+    <HeaderPerfil logoPerfil={objPerfil?.logoEmpresa} razaoSocialPerfilEmpresa={objEmpresa?.razaoSocial}/>
     <main className="main container">
       <div className="right">
         <div className="best__sellers">
@@ -31,8 +81,10 @@ const Perfil: React.FC = () => {
               <span className="sales">Última conexão: há 19 dias 🟢</span>
             </div>
           </div>
+
         </div>
       </div>
+      
 
       <div className="left">
         <div className="stats__container">
@@ -98,14 +150,7 @@ const Perfil: React.FC = () => {
                       <div className="product__item">
                         <div className="product__item-body">
                           <h3 className="product__item-title">
-                            A MarineTech Solutions é uma empresa inovadora, com
-                            sede em Burnaby, Colúmbia Britânica. <br /> Especializada
-                            no desenvolvimento e fabricação de sistemas
-                            subaquáticos tripulados e não tripulados, <br /> a
-                            MarineTech Solutions atende à indústria marítima
-                            global. Seu compromisso é fornecer soluções <br /> de alta
-                            qualidade para clientes militares, científicos e
-                            comerciais em todo o mundo.
+                            {objPerfil?.descricao}
                           </h3>
                           <span className="product__item-rating"></span>
                         </div>
@@ -119,7 +164,7 @@ const Perfil: React.FC = () => {
         </div>
       </div>
     </main>
-  );
+  </>
 };
 
 export default Perfil;

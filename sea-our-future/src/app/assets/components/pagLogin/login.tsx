@@ -1,20 +1,40 @@
 import React, { useState } from "react";
 import "./login.css"; // Importando o arquivo style.css
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { BASE_URL } from "@/utils/requests";
+import axios, { AxiosRequestConfig } from "axios";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const router = useRouter();
 
-  const handleLogin = (e: { preventDefault: () => void }) => {
+
+  const handleLogin = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     // Aqui você pode adicionar a lógica de autenticação
     if (!email || !password) {
       setError("Preencha todos os campos corretamente");
     } else {
-      // Lógica para fazer login
-      console.log("Fazendo login com email:", email);
+      // --------> BUSCA ID EMPRESA E REALIZAR O LOGIN
+      const getEmpresas: AxiosRequestConfig = {
+        baseURL: BASE_URL,
+        method: "GET",
+        url: "/empresa",
+      };
+      const empresaResponse = await axios(getEmpresas);
+      const empresa = empresaResponse.data.find((item: any) => 
+        item.email === email && item.senha === password
+      );
+  
+      if (empresa) {  
+        router.push(`/Perfil?idEmpresa=${empresa.id}`);
+      } else {
+        setError("O usuário não existe em nosso banco...");
+      }
+
     }
   };
 
